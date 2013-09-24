@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+
+<log4net>
+  <appender name="RollingFile" type="log4net.Appender.RollingFileAppender">
+    <file value="c:\dev\ipp\_data\logs\mvc_music_store-" />
+    <appendToFile value="true" />
+    <rollingStyle value="Date" />
+    <datePattern value="yyyy'-'MM'-'dd'.log'" />
+
+    <dateTimeStrategy type="log4net.Appender.RollingFileAppender+UniversalDateTime" />
+
+    <lockingModel type="log4net.Appender.FileAppender+MinimalLock" />
+	
+    <staticLogFileName value="false" />
+
+    <layout type="log4net.Layout.PatternLayout">
+      <conversionPattern value="%utcdate; LogLevel=%level; sid=%aspnet-context{log4net_app_sessionId}; rid=%aspnet-context{log4net_app_requestId}; thread=%thread; userLogin=%aspnet-context{log4net_app_userLogin}; ipAddress=%aspnet-context{log4net_app_ipAddress}; category=%logger; %message;%newline" />
+    </layout>
+  </appender>
+
+  <root>
+    <level value="INFO" />
+    <appender-ref ref="RollingFile" />
+  </root>
+</log4net>
