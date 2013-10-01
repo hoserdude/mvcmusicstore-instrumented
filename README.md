@@ -1,4 +1,4 @@
-mvcmusicstore-instrumented
+![logo](https://raw.github.com/hoserdude/mvcmusicstore-instrumented/master/MvcMusicStore/Content/Images/logo.png) mvcmusicstore-instrumented
 ==========================
 
 Yet another version of the MVC Music Store
